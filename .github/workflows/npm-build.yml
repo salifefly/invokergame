@@ -20,6 +20,10 @@ jobs:
         run:
           npm install
           npm run build
+      - name: List files
+        run: ls -R
+      - name: List distribution files
+        run: ls -la ./dist   # 如果存在则列出
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4
         with:

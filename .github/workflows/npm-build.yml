@@ -16,9 +16,11 @@ jobs:
         with:
           node-version: '20'
       
-      - name: Install dependencies and build
+      - name: Install dependencies
         run:
           npm install
+      - name: Build
+        run:    
           NODE_OPTIONS=--openssl-legacy-provider npm run build
       - name: List files
         run: ls -R

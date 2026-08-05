@@ -19,7 +19,7 @@ jobs:
       - name: Install dependencies and build
         run:
           npm install
-          npm run build
+          NODE_OPTIONS=--openssl-legacy-provider npm run build
       - name: List files
         run: ls -R
       - name: List distribution files

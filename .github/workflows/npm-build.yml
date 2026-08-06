@@ -21,10 +21,7 @@ jobs:
 
       - name: Build
         run: npm run build && echo "Build completed successfully."
-
-      - name: List distribution files
-        run: ls -la ./dist
-
+        
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4
         with:

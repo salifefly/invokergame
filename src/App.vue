@@ -101,8 +101,8 @@
 </template>
 <script>
   import {playAudio, stopAudio} from "./utils/audioHandler";
-  import Instruction from "@/components/Instruction";
-  import Hotkey from "@/components/Hotkey";
+  import Instruction from "@/components/Instruction.vue";
+  import Hotkey from "@/components/Hotkey.vue";
   import {mapState, mapMutations} from "vuex"
 
   export default {

@@ -12,20 +12,19 @@ jobs:
         uses: actions/checkout@v4
       
       - name: Use Node.js
-        uses: actions/setup-node@v2
+        uses: actions/setup-node@v4
         with:
           node-version: '16'
       
       - name: Install dependencies
-        run:
-          npm install
+        run: npm install
+
       - name: Build
-        run:    
-          npm run build
-      - name: List files
-        run: ls -R
+        run: npm run build
+
       - name: List distribution files
-        run: ls -la ./dist   # 如果存在则列出
+        run: ls -la ./dist
+
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4
         with:
